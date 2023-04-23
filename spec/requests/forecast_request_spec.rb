@@ -50,5 +50,11 @@ RSpec.describe "Forecast", type: :request do
       expect(hourly_weather.sample[:conditions]).to be_a(String)
       expect(hourly_weather.sample[:icon]).to be_a(String)
     end
+
+    it 'can handle a bad request', :vcr do
+      get '/api/v0/forecast?location='
+      bad_forecast = JSON.parse(response.body, symbolize_names: true)
+      expect(bad_forecast).to eq({ error: 'Bad Request' })
+    end
   end
 end
