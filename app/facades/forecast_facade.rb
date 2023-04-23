@@ -5,7 +5,7 @@ class ForecastFacade
   end
 
   def forecast
-    raise ArgumentError, "Genre cannot be empty or nil" if @city_state.nil? || @city_state.empty?
-    ForecastService.new.(@city_state).generate_forecast
+    lat_lng = GeocodingService.new(@city_state).get_coordinates
+    ForecastService.new.(lat_lng).generate_forecast
   end
 end
