@@ -47,5 +47,7 @@ end
 gem 'vcr'
 gem 'faraday'
 gem 'figaro'
+gem 'pry'
+gem 'faker'
 
 
