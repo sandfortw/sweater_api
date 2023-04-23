@@ -38,10 +38,16 @@ gem "bootsnap", require: false
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'webmock'
 end
 
 group :development do
-  # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
-  # gem "spring"
 end
+gem 'jsonapi-serializer'
+gem 'vcr'
+gem 'faraday'
+gem 'figaro'
+gem 'pry'
+gem 'faker'
+
 
