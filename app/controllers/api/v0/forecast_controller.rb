@@ -1,12 +1,14 @@
-class Api::V0::ForecastController < ApplicationController
+# frozen_string_literal: true
 
-  def show
-    begin
-      forecast = ForecastFacade.new(params[:location]).forecast
-      render json: ForecastSerializer.new(forecast).serializable_hash
-    rescue StandardError => e
-      render json: { error: 'Bad Request' }, status: :bad_request
+module Api
+  module V0
+    class ForecastController < ApplicationController
+      def show
+        forecast = ForecastFacade.new(params[:location]).forecast
+        render json: ForecastSerializer.new(forecast).serializable_hash
+      rescue StandardError
+        render json: { error: 'Bad Request' }, status: :bad_request
+      end
     end
   end
-
 end

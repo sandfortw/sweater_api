@@ -1,5 +1,6 @@
-class ForecastFacade 
+# frozen_string_literal: true
 
+class ForecastFacade
   def initialize(city_state)
     @city_state = city_state
   end

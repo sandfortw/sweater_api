@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe ForecastFacade, type: :facade do
   describe '#forecast', :vcr do
-    let (:facade) { ForecastFacade.new("dallas, tx") }
-    let (:forecast) { facade.forecast }
+    let(:facade) { ForecastFacade.new('dallas, tx') }
+    let(:forecast) { facade.forecast }
     it 'should return a hash' do
       expect(forecast).to be_a(Hash)
     end

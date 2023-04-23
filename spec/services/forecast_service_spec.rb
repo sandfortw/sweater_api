@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe ForecastService, type: :service do
   describe 'instance methods', :vcr do
     before do
-      @location = {lat: 39.10713, lng: -84.50413} #Cincinatti, Ohio
-      @forecast = ForecastService.new({lat: @location[:lat], lng: @location[:lng]}).get_forecast
+      @location = { lat: 39.10713, lng: -84.50413 } # Cincinatti, Ohio
+      @forecast = ForecastService.new({ lat: @location[:lat], lng: @location[:lng] }).get_forecast
     end
     describe '#get_forecast' do
       it 'should return data for current weather (current_weather)' do
