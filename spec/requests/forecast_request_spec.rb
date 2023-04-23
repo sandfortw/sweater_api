@@ -17,6 +17,7 @@ RSpec.describe "Forecast", type: :request do
 
     it 'should have current_weather attributes' do
       current_weather = @forecast[:data][:attributes][:current_weather]
+      expect(current_weather.keys).to contain_exactly(:last_updated, :temperature, :feels_like, :humidity, :uvi, :visibility, :condition, :icon)
       expect(current_weather[:last_updated]).to be_a(String)
       expect(current_weather[:temperature]).to be_a(Float)
       expect(current_weather[:feels_like]).to be_a(Float)
@@ -30,6 +31,7 @@ RSpec.describe "Forecast", type: :request do
     it 'should have daily_weather attributes' do
       daily_weather = @forecast[:data][:attributes][:daily_weather]
       expect(daily_weather.size).to eq(5)
+      expect(daily_weather.sample.keys).to contain_exactly(:date, :sunrise, :sunset, :max_temp, :min_temp, :condition, :icon)
       expect(daily_weather.sample[:date]).to be_a(String)
       expect(daily_weather.sample[:sunrise]).to be_a(String)
       expect(daily_weather.sample[:sunset]).to be_a(String)
@@ -42,6 +44,7 @@ RSpec.describe "Forecast", type: :request do
     it 'should have hourly_weather attributes' do
       hourly_weather = @forecast[:data][:attributes][:hourly_weather]
       expect(hourly_weather.size).to eq(24)
+      expect(hourly_weather.sample.keys).to contain_exactly(:time, :temperature, :conditions, :icon)
       expect(hourly_weather.sample[:time]).to be_a(String)
       expect(hourly_weather.sample[:temperature]).to be_a(Float)
       expect(hourly_weather.sample[:conditions]).to be_a(String)
