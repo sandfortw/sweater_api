@@ -92,8 +92,8 @@ GEM
     hashdiff (1.0.1)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
-    jsonapi-serializers (1.0.1)
-      activesupport
+    jsonapi-serializer (2.2.0)
+      activesupport (>= 4.2)
     loofah (2.20.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -198,7 +198,7 @@ DEPENDENCIES
   faker
   faraday
   figaro
-  jsonapi-serializers
+  jsonapi-serializer
   pg (~> 1.1)
   pry
   puma (~> 5.0)

@@ -42,8 +42,8 @@ group :development, :test do
 end
 
 group :development do
-  gem 'jsonapi-serializers'
 end
+gem 'jsonapi-serializer'
 gem 'vcr'
 gem 'faraday'
 gem 'figaro'
