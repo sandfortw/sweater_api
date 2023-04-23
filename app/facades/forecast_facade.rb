@@ -6,6 +6,6 @@ class ForecastFacade
 
   def forecast
     lat_lng = GeocodingService.new(@city_state).get_coordinates
-    ForecastService.new.(lat_lng).generate_forecast
+    ForecastService.new(lat_lng).get_forecast
   end
 end
