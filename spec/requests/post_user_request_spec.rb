@@ -6,12 +6,12 @@ RSpec.describe 'Users', type: :request do
   describe 'POST /api/v0/users', :vcr do
     it 'should create a new user if all of the payload checks out' do
       payload = {
-        email: "whatever@example.com",
-        password: "password",
-        password_confirmation: "password"
+        email: 'whatever@example.com',
+        password: 'password',
+        password_confirmation: 'password'
       }
 
-      post "/api/v0/users", params: payload.to_json
+      post '/api/v0/users', params: payload.to_json
 
       returned = JSON.parse(response.body, symbolize_names: true)
 
@@ -21,14 +21,14 @@ RSpec.describe 'Users', type: :request do
       expect(returned[:data][:attributes][:api_key]).to be_a String
     end
 
-    it 'should return some error message if the payloads passwords do not match' do 
+    it 'should return some error message if the payloads passwords do not match' do
       payload = {
-        email: "whatever@example.com",
-        password: "password",
-        password_confirmation: "password1"
+        email: 'whatever@example.com',
+        password: 'password',
+        password_confirmation: 'password1'
       }
 
-      post "/api/v0/users", params: payload.to_json
+      post '/api/v0/users', params: payload.to_json
 
       returned = JSON.parse(response.body, symbolize_names: true)
       expect(response).to have_http_status(:unprocessable_entity)
@@ -38,12 +38,12 @@ RSpec.describe 'Users', type: :request do
 
     it 'should return a different error if a field is blank' do
       payload = {
-        email: "",
-        password: "password",
-        password_confirmation: "password"
+        email: '',
+        password: 'password',
+        password_confirmation: 'password'
       }
 
-      post "/api/v0/users", params: payload.to_json
+      post '/api/v0/users', params: payload.to_json
 
       returned = JSON.parse(response.body, symbolize_names: true)
       expect(response).to have_http_status(:unprocessable_entity)

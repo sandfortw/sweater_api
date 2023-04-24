@@ -51,5 +51,5 @@ gem 'figaro'
 gem 'jsonapi-serializer'
 gem 'pry'
 gem 'rubocop'
-gem 'vcr'
-gem 'bcrypt'
+gem 'bcrypt'gem 'vcr'
+

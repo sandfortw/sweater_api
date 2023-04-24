@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class User < ApplicationRecord
   has_secure_password
 
@@ -7,7 +9,6 @@ class User < ApplicationRecord
   validates :api_key, presence: true, uniqueness: true
 
   before_validation :set_api_key
-
 
   private
 
