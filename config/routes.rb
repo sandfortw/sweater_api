@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
-  namespace :api do
+  namespace :api, defaults: {format: :json}  do
     namespace :v0 do
       get '/forecast', to: 'forecast#show'
       post '/users', to: 'users#create'

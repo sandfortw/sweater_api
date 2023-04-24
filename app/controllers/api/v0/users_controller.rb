@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class Api::V0::UsersController < ApplicationController
   def create
     user = User.create!(user_params)
     render json: UserSerializer.new(user).serializable_hash
@@ -11,6 +11,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:email, :password, :password_confirmation)
+    json_payload = JSON.parse(request.body.read)
+    ActionController::Parameters.new(json_payload).permit(:email, :password, :password_confirmation)
   end
 end
