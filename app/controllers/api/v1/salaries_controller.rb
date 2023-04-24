@@ -1,11 +1,10 @@
 
 module Api
-  module V0
+  module V1
     class SalariesController < ApplicationController
       def show
-        forecast = ForecastFacade.new(params[:destination]).forecast
         salaries = SalaryFacade.new(params[:destination]).salaries
-        # render json: ForecastSerializer.new(forecast).serializable_hash
+        render json: SalarySerializer.new(salaries).serializable_hash
       end
     end
   end
