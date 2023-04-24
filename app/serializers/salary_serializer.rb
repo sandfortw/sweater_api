@@ -21,10 +21,9 @@ class SalarySerializer
     object[:salaries].map do |salary|
       {
         title: salary[:job][:title],
-          min: format_dollars(salary[:salary_percentiles][:percentile_25]),
-          max: format_dollars(salary[:salary_percentiles][:percentile_75]),
+          min: ApplicationHelper.format_dollars(salary[:salary_percentiles][:percentile_25]),
+          max: ApplicationHelper.format_dollars(salary[:salary_percentiles][:percentile_75]),
       }
     end
   end
-
 end
