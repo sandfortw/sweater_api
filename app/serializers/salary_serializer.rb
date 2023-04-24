@@ -1,3 +1,5 @@
+require_relative '../helpers/application_helper'
+
 class SalarySerializer
   include JSONAPI::Serializer
 
@@ -11,7 +13,7 @@ class SalarySerializer
   attribute :forecast do |object|
     {
       summary: object[:current][:condition][:text],
-      temperature: object[:current][:temp_f]
+      temperature: "#{object[:current][:temp_f].to_i} F"
     }
   end
 
@@ -19,9 +21,10 @@ class SalarySerializer
     object[:salaries].map do |salary|
       {
         title: salary[:job][:title],
-          min: salary[:salary_percentiles][:percentile_25],
-          max: salary[:salary_percentiles][:percentile_75],
+          min: format_dollars(salary[:salary_percentiles][:percentile_25]),
+          max: format_dollars(salary[:salary_percentiles][:percentile_75]),
       }
     end
   end
+
 end
