@@ -5,8 +5,8 @@ class SalaryFacade
   end
 
   def salaries
-    # lat_lng = GeocodingService.new(@city_state).get_coordinates
-    # ForecastService.new(lat_lng).get_forecast
-    SalaryService.new(@city_string).get_salaries
+    forecast = ForecastFacade.new(@city_string).forecast
+    salary =  SalaryService.new(@city_string).get_salaries
+    forecast.merge(salary)
   end
 end

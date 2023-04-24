@@ -16,5 +16,17 @@ RSpec.describe SalaryFacade, type: :facade do
       expect(salaries[:salaries].first[:salary_percentiles][:percentile_25]).to be_a(Float)
       expect(salaries[:salaries].first[:salary_percentiles][:percentile_75]).to be_a(Float)
     end
+
+    it 'should return weather data', :vcr do
+      expect(salaries).to be_a(Hash)
+      expect(salaries[:current][:last_updated]).to be_a(String)
+      expect(salaries[:current][:temp_f]).to be_a(Float)
+      expect(salaries[:current][:feelslike_f]).to be_a(Float)
+      expect(salaries[:current][:humidity]).to be_an(Integer)
+      expect(salaries[:current][:uv]).to be_a(Float)
+      expect(salaries[:current][:vis_miles]).to be_a(Float)
+      expect(salaries[:current][:condition][:text]).to be_a(String)
+      expect(salaries[:current][:condition][:icon]).to be_a(String)
+    end
   end
 end

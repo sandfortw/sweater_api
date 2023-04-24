@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 24 Apr 2023 15:35:03 GMT
+      - Mon, 24 Apr 2023 15:36:37 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -29,17 +29,17 @@ http_interactions:
       X-Ratelimit-Limit-2628000:
       - '15000'
       X-Ratelimit-Remaining-2628000:
-      - '14894'
+      - '14889'
       Ratelimit-Limit:
       - '15000'
       Ratelimit-Remaining:
-      - '14894'
+      - '14889'
       Ratelimit-Reset:
-      - '2197497'
+      - '2197403'
       X-Powered-By:
       - MapQuest
       X-Request-Id:
-      - 94cd3db0-e2b5-11ed-aa3c-cb240186020f
+      - cd09e890-e2b5-11ed-aa3c-cb240186020f
       Access-Control-Allow-Origin:
       - "*"
       X-Transaction-Count:
@@ -50,7 +50,7 @@ http_interactions:
       encoding: ASCII-8BIT
       string: !binary |-
         eyJpbmZvIjp7InN0YXR1c2NvZGUiOjAsImNvcHlyaWdodCI6eyJ0ZXh0IjoiwqkgMjAyMiBNYXBRdWVzdCwgSW5jLiIsImltYWdlVXJsIjoiaHR0cDovL2FwaS5tcWNkbi5jb20vcmVzL21xbG9nby5naWYiLCJpbWFnZUFsdFRleHQiOiLCqSAyMDIyIE1hcFF1ZXN0LCBJbmMuIn0sIm1lc3NhZ2VzIjpbXX0sIm9wdGlvbnMiOnsibWF4UmVzdWx0cyI6LTEsImlnbm9yZUxhdExuZ0lucHV0IjpmYWxzZX0sInJlc3VsdHMiOlt7InByb3ZpZGVkTG9jYXRpb24iOnsibG9jYXRpb24iOiJkYWxsYXMifSwibG9jYXRpb25zIjpbeyJzdHJlZXQiOiIiLCJhZG1pbkFyZWE2IjoiIiwiYWRtaW5BcmVhNlR5cGUiOiJOZWlnaGJvcmhvb2QiLCJhZG1pbkFyZWE1IjoiRGFsbGFzIiwiYWRtaW5BcmVhNVR5cGUiOiJDaXR5IiwiYWRtaW5BcmVhNCI6IkRhbGxhcyIsImFkbWluQXJlYTRUeXBlIjoiQ291bnR5IiwiYWRtaW5BcmVhMyI6IlRYIiwiYWRtaW5BcmVhM1R5cGUiOiJTdGF0ZSIsImFkbWluQXJlYTEiOiJVUyIsImFkbWluQXJlYTFUeXBlIjoiQ291bnRyeSIsInBvc3RhbENvZGUiOiIiLCJnZW9jb2RlUXVhbGl0eUNvZGUiOiJBNVhBWCIsImdlb2NvZGVRdWFsaXR5IjoiQ0lUWSIsImRyYWdQb2ludCI6ZmFsc2UsInNpZGVPZlN0cmVldCI6Ik4iLCJsaW5rSWQiOiIwIiwidW5rbm93bklucHV0IjoiIiwidHlwZSI6InMiLCJsYXRMbmciOnsibGF0IjozMi43NzgyMiwibG5nIjotOTYuNzk1MTJ9LCJkaXNwbGF5TGF0TG5nIjp7ImxhdCI6MzIuNzc4MjIsImxuZyI6LTk2Ljc5NTEyfSwibWFwVXJsIjoiIn1dfV19
-  recorded_at: Mon, 24 Apr 2023 15:35:03 GMT
+  recorded_at: Mon, 24 Apr 2023 15:36:37 GMT
 - request:
     method: get
     uri: http://api.weatherapi.com/v1/forecast.json?alerts=no&aqi=no&days=5&key=WEATHER_API_KEY&q=32.77822,-96.79512
@@ -70,7 +70,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 24 Apr 2023 15:35:03 GMT
+      - Mon, 24 Apr 2023 15:36:37 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -80,7 +80,7 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Server:
-      - BunnyCDN-IL1-941
+      - BunnyCDN-IL1-1070
       Cdn-Pullzone:
       - '93447'
       Cdn-Uid:
@@ -102,9 +102,9 @@ http_interactions:
       Cdn-Status:
       - '200'
       Cdn-Requestid:
-      - 1d8d2a74f759c45a21aecd94598e93a6
+      - 318cc19b0886b91d4fca45cdd79d1e02
       Cdn-Cache:
-      - MISS
+      - HIT
     body:
       encoding: ASCII-8BIT
       string: '{"location":{"name":"Dallas","region":"Texas","country":"United States
@@ -307,7 +307,7 @@ http_interactions:
         rain possible","icon":"//cdn.weatherapi.com/weather/64x64/night/176.png","code":1063},"wind_mph":13.6,"wind_kph":22.0,"wind_degree":30,"wind_dir":"NNE","pressure_mb":1014.0,"pressure_in":29.94,"precip_mm":0.9,"precip_in":0.04,"humidity":83,"cloud":81,"feelslike_c":8.6,"feelslike_f":47.5,"windchill_c":8.6,"windchill_f":47.5,"heatindex_c":11.1,"heatindex_f":52.0,"dewpoint_c":8.3,"dewpoint_f":46.9,"will_it_rain":1,"chance_of_rain":82,"will_it_snow":0,"chance_of_snow":0,"vis_km":9.0,"vis_miles":5.0,"gust_mph":18.3,"gust_kph":29.5,"uv":1.0},{"time_epoch":1682740800,"time":"2023-04-28
         23:00","temp_c":11.0,"temp_f":51.8,"is_day":0,"condition":{"text":"Patchy
         rain possible","icon":"//cdn.weatherapi.com/weather/64x64/night/176.png","code":1063},"wind_mph":10.5,"wind_kph":16.9,"wind_degree":21,"wind_dir":"NNE","pressure_mb":1014.0,"pressure_in":29.95,"precip_mm":0.9,"precip_in":0.04,"humidity":82,"cloud":83,"feelslike_c":9.1,"feelslike_f":48.4,"windchill_c":9.1,"windchill_f":48.4,"heatindex_c":11.0,"heatindex_f":51.8,"dewpoint_c":8.0,"dewpoint_f":46.4,"will_it_rain":1,"chance_of_rain":76,"will_it_snow":0,"chance_of_snow":0,"vis_km":9.0,"vis_miles":5.0,"gust_mph":14.5,"gust_kph":23.4,"uv":1.0}]}]}}'
-  recorded_at: Mon, 24 Apr 2023 15:35:03 GMT
+  recorded_at: Mon, 24 Apr 2023 15:36:37 GMT
 - request:
     method: get
     uri: https://api.teleport.org/api/urban_areas/slug:dallas/salaries
@@ -345,13 +345,15 @@ http_interactions:
       Vary:
       - Origin,Accept-Encoding
       X-Cache:
-      - Miss from cloudfront
+      - Hit from cloudfront
       Via:
       - 1.1 0f54c067a3766b64cd25538d55ce43d0.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - DEN50-C1
       X-Amz-Cf-Id:
-      - _PpVNJbDX7Pg-yNNmothmCTPhtAnoRYUfmmShlWCSiMgUz71WZLiPw==
+      - RWybCam10NI8lUUAWZp4pQrQh5Fla6fxpUu-zpDftLzoICG3g2-Jqw==
+      Age:
+      - '94'
     body:
       encoding: ASCII-8BIT
       string: '{"_links":{"curies":[{"href":"https://developers.teleport.org/api/resources/Location/#!/relations/{rel}/","name":"location","templated":true},{"href":"https://developers.teleport.org/api/resources/City/#!/relations/{rel}/","name":"city","templated":true},{"href":"https://developers.teleport.org/api/resources/UrbanArea/#!/relations/{rel}/","name":"ua","templated":true},{"href":"https://developers.teleport.org/api/resources/Country/#!/relations/{rel}/","name":"country","templated":true},{"href":"https://developers.teleport.org/api/resources/Admin1Division/#!/relations/{rel}/","name":"a1","templated":true},{"href":"https://developers.teleport.org/api/resources/Timezone/#!/relations/{rel}/","name":"tz","templated":true}],"self":{"href":"https://api.teleport.org/api/urban_areas/slug:dallas/salaries/"}},"salaries":[{"job":{"id":"ACCOUNT-MANAGER","title":"Account
@@ -393,5 +395,5 @@ http_interactions:
         Designer"},"salary_percentiles":{"percentile_25":73229.32828395646,"percentile_50":89789.91807687905,"percentile_75":110095.63486626951}},{"job":{"id":"WAITER","title":"Waiter"},"salary_percentiles":{"percentile_25":15636.350449971598,"percentile_50":23933.84585375116,"percentile_75":36634.44223662576}},{"job":{"id":"WEB-DESIGNER","title":"Web
         Designer"},"salary_percentiles":{"percentile_25":48673.98857468628,"percentile_50":59558.480193410585,"percentile_75":72876.9650242649}},{"job":{"id":"WEB-DEVELOPER","title":"Web
         Developer"},"salary_percentiles":{"percentile_25":56688.123372262984,"percentile_50":70242.35258807614,"percentile_75":87037.4216607383}}]}'
-  recorded_at: Mon, 24 Apr 2023 15:35:04 GMT
+  recorded_at: Mon, 24 Apr 2023 15:36:38 GMT
 recorded_with: VCR 6.1.0
