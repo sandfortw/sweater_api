@@ -24,7 +24,13 @@ RSpec.describe "Salary", type: :request do
       expect(@salary[:data][:attributes][:salaries].sample).to be_a Hash
       expect(@salary[:data][:attributes][:salaries].sample[:title]).to be_a String
       expect(@salary[:data][:attributes][:salaries].sample[:min]).to be_a String
+      expect(@salary[:data][:attributes][:salaries].sample[:min]).to match(/\$/)
+      expect(@salary[:data][:attributes][:salaries].sample[:min]).to match(/\./)
+      expect(@salary[:data][:attributes][:salaries].sample[:min]).to match(/\,/)
       expect(@salary[:data][:attributes][:salaries].sample[:max]).to be_a String
+      expect(@salary[:data][:attributes][:salaries].sample[:max]).to match(/\$/)
+      expect(@salary[:data][:attributes][:salaries].sample[:max]).to match(/\./)
+      expect(@salary[:data][:attributes][:salaries].sample[:max]).to match(/\,/)
     end
   end
 end
