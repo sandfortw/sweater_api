@@ -3,13 +3,12 @@ module Api
     class SessionsController < ApplicationController
 
       def create
-
         user = User.find_by(email: session_params[:email])
         if user && user.authenticate(session_params[:password])
           render json: UserSerializer.new(user).serializable_hash
+        else
+          render json: { error: "Bad email or password"}, status: :bad_request
         end
-      rescue => e
-        render json: { error: e.message }, status: :bad_request
       end
 
       private
