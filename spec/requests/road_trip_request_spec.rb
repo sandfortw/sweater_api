@@ -11,7 +11,6 @@ let(:valid_payload) { {origin: 'Denver, CO', destination: 'Dallas, TX', api_key:
       it 'should return a hash with travel information', :vcr do
         post '/api/v0/road_trip', params: valid_payload.to_json
         returned = JSON.parse(response.body, symbolize_names: true)
-
         expect(returned[:data]).to be_a Hash
         expect(returned[:data][:id]).to be nil
         expect(returned[:data][:type]).to eq "road_trip"
@@ -35,12 +34,19 @@ let(:valid_payload) { {origin: 'Denver, CO', destination: 'Dallas, TX', api_key:
         expect(returned[:error]).to eq("Invalid API")
       end
 
-      it 'returns invalid unprocessable entity when the route is impossible' do
-        invalid_payload = {origin: 'Denver, CO', destination: 'Paris, France', api_key: user.api_key}
-        post '/api/v0/road_trip', params: invalid_payload.to_json
+      it 'still returns a hash when the route is impossible' do
+        impossible_payload = {origin: 'Denver, CO', destination: 'Paris, France', api_key: user.api_key}
+        post '/api/v0/road_trip', params: impossible_payload.to_json
         returned = JSON.parse(response.body, symbolize_names: true)
-        expect(response).to have_http_status(:unprocessable_entity)
-        expect(returned[:error]).to eq("Bad Route")
+        expect(response).to have_http_status(:ok)
+        expect(returned[:data]).to be_a Hash
+        expect(returned[:data][:id]).to be nil
+        expect(returned[:data][:type]).to eq "road_trip"
+        expect(returned[:data][:attributes].keys).to contain_exactly(:start_city, :end_city, :travel_time, :weather_at_eta)
+        expect(returned[:data][:attributes][:start_city]).to eq(impossible_payload[:origin])
+        expect(returned[:data][:attributes][:end_city]).to eq(impossible_payload[:destination])
+        expect(returned[:data][:attributes][:travel_time]).to eq("Impossible")
+        expect(returned[:data][:attributes][:weather_at_eta]).to eq({})
       end
     end
   end

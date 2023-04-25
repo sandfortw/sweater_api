@@ -8,7 +8,7 @@ module Api
           user = User.create!(user_params) 
           render json: UserSerializer.new(user).serializable_hash, status: 201
         else
-          render json: { error: "Email Already in System"}, status: :bad_request
+          render json: { error: "Email Already in System"}, status: :conflict
         end
       rescue => e
         render json: { error: e.message }, status: :bad_request

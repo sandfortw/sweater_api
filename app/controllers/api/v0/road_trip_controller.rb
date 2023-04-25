@@ -11,7 +11,7 @@ module Api
           render json: {error: "Invalid API"}, status: :unauthorized
         end
       rescue
-        render json: {error: "Bad Route"}, status: :unprocessable_entity
+        render json: {error: "Error"}, status: :unprocessable_entity
       end
 
       private
