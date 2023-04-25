@@ -19,4 +19,8 @@ class User < ApplicationRecord
   def self.valid_key?(key)
     User.where(api_key: key).size == 1 
   end
+
+  def self.email_exists?(email)
+    User.where(email: email).size >= 1 
+  end
 end
