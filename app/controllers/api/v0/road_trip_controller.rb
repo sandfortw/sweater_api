@@ -4,8 +4,14 @@ module Api
     class RoadTripController < ApplicationController
 
       def create
-        route = RoadTripFacade.new(route_params).road_trip
-        render json: RoadTripSerializer.new(route).serializable_hash
+        if User.valid_key?(route_params[:api_key])
+          route = RoadTripFacade.new(route_params).road_trip
+          render json: RoadTripSerializer.new(route).serializable_hash
+        else
+          render json: {error: "Invalid API"}, status: :unauthorized
+        end
+      rescue
+        render json: {error: "Bad Route"}, status: :unprocessable_entity
       end
 
       private

@@ -15,4 +15,8 @@ class User < ApplicationRecord
   def set_api_key
     self.api_key = SecureRandom.base64.tr('+/=', 'Qrt')
   end
+
+  def self.valid_key?(key)
+    User.where(api_key: key).size == 1 
+  end
 end
