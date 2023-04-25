@@ -17,7 +17,7 @@ class ForecastService
     json = JSON.parse(response.body, symbolize_names: true)
   end
 
-  def get_forecast_by_unix
+  def get_forecast_by_time
     response = conn.get do |req|
       req.url 'v1/forecast.json'
       req.params[:key] = ENV['WEATHER_API_KEY']

@@ -19,7 +19,7 @@ class RoadTripFacade
       time_of_arrival = Time.at(unix_time_of_arrival).strftime('%Y-%m-%d')
       hour_of_arrival = Time.at(unix_time_of_arrival).hour
       forecast = ForecastService.new({ d: @payload[:destination], t: time_of_arrival,
-                                       h: hour_of_arrival }).get_forecast_by_unix
+                                       h: hour_of_arrival }).get_forecast_by_time
       {
         start_city: @payload[:origin],
         end_city: @payload[:destination],
