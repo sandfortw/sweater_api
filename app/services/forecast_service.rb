@@ -1,5 +1,6 @@
-class ForecastService
+# frozen_string_literal: true
 
+class ForecastService
   def initialize(info)
     @info = info
   end
@@ -10,8 +11,8 @@ class ForecastService
       req.params[:key] = ENV['WEATHER_API_KEY']
       req.params[:q] = "#{@info[:lat]}\,#{@info[:lng]}"
       req.params[:days] = '5'
-      req.params[:aqi] = "no"
-      req.params[:alerts] = "no"
+      req.params[:aqi] = 'no'
+      req.params[:alerts] = 'no'
     end
     json = JSON.parse(response.body, symbolize_names: true)
   end
@@ -19,6 +20,6 @@ class ForecastService
   private
 
   def conn
-    Faraday.new(url: "http://api.weatherapi.com")
+    Faraday.new(url: 'http://api.weatherapi.com')
   end
 end

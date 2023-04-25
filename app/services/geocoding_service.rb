@@ -1,5 +1,6 @@
-class GeocodingService
+# frozen_string_literal: true
 
+class GeocodingService
   def initialize(city_string)
     @city_string = city_string
   end
@@ -16,6 +17,6 @@ class GeocodingService
   private
 
   def conn
-    Faraday.new(url: "https://www.mapquestapi.com/geocoding/v1/address")
+    Faraday.new(url: 'https://www.mapquestapi.com/geocoding/v1/address')
   end
 end
