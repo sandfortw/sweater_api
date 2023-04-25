@@ -29,7 +29,7 @@ RSpec.describe 'Sessions Post', type: :request do
 
       returned = JSON.parse(response.body, symbolize_names: true)
       expect(returned).to be_a Hash
-      expect(returned[:error]).to eq("Bad email or password") 
+      expect(returned[:error]).to eq('Bad email or password')
       expect(response).to have_http_status(:bad_request)
     end
 
@@ -41,10 +41,9 @@ RSpec.describe 'Sessions Post', type: :request do
 
       returned = JSON.parse(response.body, symbolize_names: true)
       expect(returned).to be_a Hash
-      expect(returned[:error]).to eq("Bad email or password") 
+      expect(returned[:error]).to eq('Bad email or password')
       expect(response).to have_http_status(:bad_request)
     end
-
 
     it 'should return an error if the fields are blank' do
       user = User.create!(email: 'realemail@example.com', password: 'abcde12345', password_confirmation: 'abcde12345')
@@ -54,7 +53,7 @@ RSpec.describe 'Sessions Post', type: :request do
 
       returned = JSON.parse(response.body, symbolize_names: true)
       expect(returned).to be_a Hash
-      expect(returned[:error]).to eq("Bad email or password") 
+      expect(returned[:error]).to eq('Bad email or password')
       expect(response).to have_http_status(:bad_request)
     end
   end
