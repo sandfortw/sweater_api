@@ -9,7 +9,6 @@ RSpec.describe RoadTripFacade, type: :facade do
   let(:bad_payload) { { origin: 'Denver, CO', destination: 'Madrid, Spain' } }
   let(:sad_facade) { RoadTripFacade.new(bad_payload) }
 
-
   describe '#road_trip' do
     it 'should return a hash with the following attributes (happy path)', :vcr do
       expect(happy_facade.road_trip).to be_a Hash
