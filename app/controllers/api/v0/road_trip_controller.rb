@@ -1,14 +1,12 @@
-
 module Api
   module V0
     class RoadTripController < ApplicationController
-
       def create
         if User.valid_key?(route_params[:api_key])
           route = RoadTripFacade.new(route_params).road_trip
           render json: RoadTripSerializer.new(route).serializable_hash
         else
-          render json: {error: "Invalid API"}, status: :unauthorized
+          render json: { error: 'Invalid API' }, status: :unauthorized
         end
       end
 

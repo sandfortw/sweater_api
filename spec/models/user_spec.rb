@@ -3,7 +3,9 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  let(:user) { User.create!(email: 'newuser@example.com', password: 'abcde12345', password_confirmation: 'abcde12345')  }
+  let(:user) do
+    User.create!(email: 'newuser@example.com', password: 'abcde12345', password_confirmation: 'abcde12345')
+  end
 
   describe 'validations' do
     it { should have_secure_password }

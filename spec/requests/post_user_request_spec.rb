@@ -34,7 +34,7 @@ RSpec.describe 'Users', type: :request do
       returned = JSON.parse(response.body, symbolize_names: true)
       expect(response).to have_http_status(:conflict)
       expect(returned[:error]).to be_a String
-      expect(returned[:error].include?("Email Already in System")).to be(true)
+      expect(returned[:error].include?('Email Already in System')).to be(true)
     end
 
     it 'should return some error message if the payloads passwords do not match' do

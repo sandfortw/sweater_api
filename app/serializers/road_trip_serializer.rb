@@ -6,7 +6,6 @@ class RoadTripSerializer
   set_id { nil }
   set_type :road_trip
 
-
   attribute :start_city do |object|
     object[:start_city]
   end
