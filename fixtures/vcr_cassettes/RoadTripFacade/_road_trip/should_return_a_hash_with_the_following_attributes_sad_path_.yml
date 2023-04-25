@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 25 Apr 2023 19:17:29 GMT
+      - Tue, 25 Apr 2023 20:46:33 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -29,17 +29,17 @@ http_interactions:
       X-Ratelimit-Limit-2628000:
       - '15000'
       X-Ratelimit-Remaining-2628000:
-      - '14611'
+      - '14504'
       Ratelimit-Limit:
       - '15000'
       Ratelimit-Remaining:
-      - '14611'
+      - '14504'
       Ratelimit-Reset:
-      - '2097751'
+      - '2092407'
       X-Powered-By:
       - MapQuest
       X-Request-Id:
-      - d1bfec20-e39d-11ed-93f2-f58bd665ccb0
+      - 43717d50-e3aa-11ed-b817-6d74f0015ecb
       Access-Control-Allow-Origin:
       - "*"
       X-Transaction-Count:
@@ -50,7 +50,7 @@ http_interactions:
       encoding: ASCII-8BIT
       string: !binary |-
         eyJyb3V0ZSI6eyJyb3V0ZUVycm9yIjp7ImVycm9yQ29kZSI6MiwibWVzc2FnZSI6IiJ9fSwiaW5mbyI6eyJzdGF0dXNjb2RlIjo0MDIsImNvcHlyaWdodCI6eyJ0ZXh0IjoiwqkgMjAyMiBNYXBRdWVzdCwgSW5jLiIsImltYWdlVXJsIjoiaHR0cDovL2FwaS5tcWNkbi5jb20vcmVzL21xbG9nby5naWYiLCJpbWFnZUFsdFRleHQiOiLCqSAyMDIyIE1hcFF1ZXN0LCBJbmMuIn0sIm1lc3NhZ2VzIjpbIldlIGFyZSB1bmFibGUgdG8gcm91dGUgd2l0aCB0aGUgZ2l2ZW4gbG9jYXRpb25zLiJdfX0=
-  recorded_at: Tue, 25 Apr 2023 19:17:29 GMT
+  recorded_at: Tue, 25 Apr 2023 20:46:33 GMT
 - request:
     method: get
     uri: https://www.mapquestapi.com/directions/v2/route?from=Denver,%20CO&key=MAPQUEST_API_KEY&to=Madrid,%20Spain
@@ -70,7 +70,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 25 Apr 2023 19:17:30 GMT
+      - Tue, 25 Apr 2023 20:46:35 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -80,17 +80,17 @@ http_interactions:
       X-Ratelimit-Limit-2628000:
       - '15000'
       X-Ratelimit-Remaining-2628000:
-      - '14604'
+      - '14501'
       Ratelimit-Limit:
       - '15000'
       Ratelimit-Remaining:
-      - '14604'
+      - '14501'
       Ratelimit-Reset:
-      - '2097750'
+      - '2092405'
       X-Powered-By:
       - MapQuest
       X-Request-Id:
-      - d238c5a0-e39d-11ed-9d80-87f90737737a
+      - 43f49000-e3aa-11ed-9d80-87f90737737a
       Access-Control-Allow-Origin:
       - "*"
       X-Transaction-Count:
@@ -101,7 +101,7 @@ http_interactions:
       encoding: ASCII-8BIT
       string: !binary |-
         eyJyb3V0ZSI6eyJyb3V0ZUVycm9yIjp7ImVycm9yQ29kZSI6MiwibWVzc2FnZSI6IiJ9fSwiaW5mbyI6eyJzdGF0dXNjb2RlIjo0MDIsImNvcHlyaWdodCI6eyJ0ZXh0IjoiwqkgMjAyMiBNYXBRdWVzdCwgSW5jLiIsImltYWdlVXJsIjoiaHR0cDovL2FwaS5tcWNkbi5jb20vcmVzL21xbG9nby5naWYiLCJpbWFnZUFsdFRleHQiOiLCqSAyMDIyIE1hcFF1ZXN0LCBJbmMuIn0sIm1lc3NhZ2VzIjpbIldlIGFyZSB1bmFibGUgdG8gcm91dGUgd2l0aCB0aGUgZ2l2ZW4gbG9jYXRpb25zLiJdfX0=
-  recorded_at: Tue, 25 Apr 2023 19:17:30 GMT
+  recorded_at: Tue, 25 Apr 2023 20:46:34 GMT
 - request:
     method: get
     uri: https://www.mapquestapi.com/directions/v2/route?from=Denver,%20CO&key=MAPQUEST_API_KEY&to=Madrid,%20Spain
@@ -121,7 +121,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 25 Apr 2023 19:17:30 GMT
+      - Tue, 25 Apr 2023 20:46:35 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -131,17 +131,17 @@ http_interactions:
       X-Ratelimit-Limit-2628000:
       - '15000'
       X-Ratelimit-Remaining-2628000:
-      - '14596'
+      - '14499'
       Ratelimit-Limit:
       - '15000'
       Ratelimit-Remaining:
-      - '14596'
+      - '14499'
       Ratelimit-Reset:
-      - '2097750'
+      - '2092405'
       X-Powered-By:
       - MapQuest
       X-Request-Id:
-      - d2b7e0b0-e39d-11ed-93f2-f58bd665ccb0
+      - 448fe5a0-e3aa-11ed-b817-6d74f0015ecb
       Access-Control-Allow-Origin:
       - "*"
       X-Transaction-Count:
@@ -152,7 +152,7 @@ http_interactions:
       encoding: ASCII-8BIT
       string: !binary |-
         eyJyb3V0ZSI6eyJyb3V0ZUVycm9yIjp7ImVycm9yQ29kZSI6MiwibWVzc2FnZSI6IiJ9fSwiaW5mbyI6eyJzdGF0dXNjb2RlIjo0MDIsImNvcHlyaWdodCI6eyJ0ZXh0IjoiwqkgMjAyMiBNYXBRdWVzdCwgSW5jLiIsImltYWdlVXJsIjoiaHR0cDovL2FwaS5tcWNkbi5jb20vcmVzL21xbG9nby5naWYiLCJpbWFnZUFsdFRleHQiOiLCqSAyMDIyIE1hcFF1ZXN0LCBJbmMuIn0sIm1lc3NhZ2VzIjpbIldlIGFyZSB1bmFibGUgdG8gcm91dGUgd2l0aCB0aGUgZ2l2ZW4gbG9jYXRpb25zLiJdfX0=
-  recorded_at: Tue, 25 Apr 2023 19:17:30 GMT
+  recorded_at: Tue, 25 Apr 2023 20:46:35 GMT
 - request:
     method: get
     uri: https://www.mapquestapi.com/directions/v2/route?from=Denver,%20CO&key=MAPQUEST_API_KEY&to=Madrid,%20Spain
@@ -172,7 +172,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 25 Apr 2023 19:17:31 GMT
+      - Tue, 25 Apr 2023 20:46:36 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -182,17 +182,17 @@ http_interactions:
       X-Ratelimit-Limit-2628000:
       - '15000'
       X-Ratelimit-Remaining-2628000:
-      - '14597'
+      - '14492'
       Ratelimit-Limit:
       - '15000'
       Ratelimit-Remaining:
-      - '14597'
+      - '14492'
       Ratelimit-Reset:
-      - '2097749'
+      - '2092404'
       X-Powered-By:
       - MapQuest
       X-Request-Id:
-      - d3424660-e39d-11ed-9d80-87f90737737a
+      - 451e9110-e3aa-11ed-93f2-f58bd665ccb0
       Access-Control-Allow-Origin:
       - "*"
       X-Transaction-Count:
@@ -203,7 +203,7 @@ http_interactions:
       encoding: ASCII-8BIT
       string: !binary |-
         eyJyb3V0ZSI6eyJyb3V0ZUVycm9yIjp7ImVycm9yQ29kZSI6MiwibWVzc2FnZSI6IiJ9fSwiaW5mbyI6eyJzdGF0dXNjb2RlIjo0MDIsImNvcHlyaWdodCI6eyJ0ZXh0IjoiwqkgMjAyMiBNYXBRdWVzdCwgSW5jLiIsImltYWdlVXJsIjoiaHR0cDovL2FwaS5tcWNkbi5jb20vcmVzL21xbG9nby5naWYiLCJpbWFnZUFsdFRleHQiOiLCqSAyMDIyIE1hcFF1ZXN0LCBJbmMuIn0sIm1lc3NhZ2VzIjpbIldlIGFyZSB1bmFibGUgdG8gcm91dGUgd2l0aCB0aGUgZ2l2ZW4gbG9jYXRpb25zLiJdfX0=
-  recorded_at: Tue, 25 Apr 2023 19:17:31 GMT
+  recorded_at: Tue, 25 Apr 2023 20:46:36 GMT
 - request:
     method: get
     uri: https://www.mapquestapi.com/directions/v2/route?from=Denver,%20CO&key=MAPQUEST_API_KEY&to=Madrid,%20Spain
@@ -223,7 +223,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 25 Apr 2023 19:17:32 GMT
+      - Tue, 25 Apr 2023 20:46:37 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -233,17 +233,17 @@ http_interactions:
       X-Ratelimit-Limit-2628000:
       - '15000'
       X-Ratelimit-Remaining-2628000:
-      - '14588'
+      - '14488'
       Ratelimit-Limit:
       - '15000'
       Ratelimit-Remaining:
-      - '14588'
+      - '14488'
       Ratelimit-Reset:
-      - '2097748'
+      - '2092403'
       X-Powered-By:
       - MapQuest
       X-Request-Id:
-      - d3bd42c0-e39d-11ed-b817-6d74f0015ecb
+      - 45a99300-e3aa-11ed-93f2-f58bd665ccb0
       Access-Control-Allow-Origin:
       - "*"
       X-Transaction-Count:
@@ -254,5 +254,5 @@ http_interactions:
       encoding: ASCII-8BIT
       string: !binary |-
         eyJyb3V0ZSI6eyJyb3V0ZUVycm9yIjp7ImVycm9yQ29kZSI6MiwibWVzc2FnZSI6IiJ9fSwiaW5mbyI6eyJzdGF0dXNjb2RlIjo0MDIsImNvcHlyaWdodCI6eyJ0ZXh0IjoiwqkgMjAyMiBNYXBRdWVzdCwgSW5jLiIsImltYWdlVXJsIjoiaHR0cDovL2FwaS5tcWNkbi5jb20vcmVzL21xbG9nby5naWYiLCJpbWFnZUFsdFRleHQiOiLCqSAyMDIyIE1hcFF1ZXN0LCBJbmMuIn0sIm1lc3NhZ2VzIjpbIldlIGFyZSB1bmFibGUgdG8gcm91dGUgd2l0aCB0aGUgZ2l2ZW4gbG9jYXRpb25zLiJdfX0=
-  recorded_at: Tue, 25 Apr 2023 19:17:32 GMT
+  recorded_at: Tue, 25 Apr 2023 20:46:37 GMT
 recorded_with: VCR 6.1.0
