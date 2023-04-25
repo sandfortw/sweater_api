@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class RoadTripFacade
   def initialize(payload)
     @payload = payload
