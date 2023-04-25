@@ -45,11 +45,11 @@ end
 
 group :development do
 end
+gem 'bcrypt'
 gem 'faker'
 gem 'faraday'
 gem 'figaro'
 gem 'jsonapi-serializer'
 gem 'pry'
 gem 'rubocop'
-gem 'bcrypt'gem 'vcr'
-
+gem 'vcr'
