@@ -44,4 +44,13 @@ RSpec.describe ForecastService, type: :service do
       expect(@forecast[:forecast][:forecastday].sample[:hour].sample[:condition][:icon]).to be_a(String)
     end
   end
+
+  describe '#get_forecast_by_time', :vcr do
+    let(:forecast_dt) { { d: 'Dallas, TX', t: '2023-04-26', h: 1 } }
+    it 'should return weather for the hour inputted' do
+      service = ForecastService.new(forecast_dt).get_forecast_by_time
+      expect(service[:forecast][:forecastday][0][:hour][0][:temp_f]).to be_a Numeric
+      expect(service[:forecast][:forecastday][0][:hour][0][:condition][:text]).to be_a String
+    end
+  end
 end
