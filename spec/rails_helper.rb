@@ -35,6 +35,16 @@ rescue ActiveRecord::PendingMigrationError => e
   abort e.to_s.strip
 end
 RSpec.configure do |config|
+
+  config.before(:suite) do
+    t = Time.local(2023, 4, 25, 3, 0, 0)
+    Timecop.travel(t)
+  end
+
+  config.after(:suite) do
+    Timecop.return
+  end
+
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
