@@ -41,6 +41,7 @@ gem 'bootsnap', require: false
 group :development, :test do
   gem 'rspec-rails'
   gem 'webmock'
+  gem 'shoulda-matchers', '~> 5.0'
 end
 
 group :development do
