@@ -25,5 +25,23 @@ let(:valid_payload) { {origin: 'Denver, CO', destination: 'Dallas, TX', api_key:
         expect(returned[:data][:attributes][:weather_at_eta][:condition]).to be_a String
       end
     end
+
+    context 'invalid payload' do
+      it 'returns an unauthorized error when api key is invalid' do
+        invalid_payload = {origin: 'Denver, CO', destination: 'Dallas, TX', api_key: 'hello world'}
+        post '/api/v0/users', params: invalid_payload.to_json
+        returned = JSON.parse(response.body, symbolize_names: true)
+        expect(response).to have_http_status(:unauthorized)
+        expect(returned[:error]).to eq("Invalid API")
+      end
+
+      it 'returns invalid unprocessable entity when the route is impossible' do
+        invalid_payload = {origin: 'Denver, CO', destination: 'Paris, France', api_key: user.api_key}
+        post '/api/v0/users', params: invalid_payload.to_json
+        returned = JSON.parse(response.body, symbolize_names: true)
+        expect(response).to have_http_status(:unprocessable_entity)
+        expect(returned[:error]).to eq("Bad Route")
+      end
+    end
   end
 end
